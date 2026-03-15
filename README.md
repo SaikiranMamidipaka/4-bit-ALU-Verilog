@@ -90,4 +90,5 @@ iverilog -o alu_tb.vvp alu_tb.v alu.v logical.v arithmetic.v mux_4x1.v ripple_ca
 ## 📷 Simulation Waveform
 
 ### ALU Output Waveform
+
 ![ALU Waveform](screenshots/waveform.png)
