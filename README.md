@@ -5,7 +5,7 @@ The ALU combines separate **arithmetic** and **logical** operation blocks and se
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 The design is divided into multiple reusable modules:
 
@@ -21,7 +21,7 @@ This modular approach improves readability, reusability, and understanding of di
 
 ---
 
-## ⚙️ Features
+## Features
 
 - 4-bit ALU design using **Verilog HDL**
 - Separate **arithmetic** and **logical** units
@@ -32,7 +32,7 @@ This modular approach improves readability, reusability, and understanding of di
 
 ---
 
-## 🧩 Modules Used
+## Modules Used
 
 - `full_adder.v`
 - `ripple_carry_adder_4bit.v`
@@ -44,7 +44,7 @@ This modular approach improves readability, reusability, and understanding of di
 
 ---
 
-## 🔢 ALU Operations
+## ALU Operations
 
 ### Arithmetic Mode (`mode = 0`)
 The arithmetic unit uses:
@@ -68,7 +68,7 @@ The logical unit performs:
 
 ---
 
-## 🏗️ Top-Level ALU Working
+## Top-Level ALU Working
 
 - **`mode = 0`** → selects **Arithmetic Unit output**
 - **`mode = 1`** → selects **Logical Unit output**
@@ -79,16 +79,11 @@ Final output:
 
 ---
 
-## 🧪 Simulation
+## Simulation
 
 ### Compile
 ```bash
 iverilog -o alu_tb.vvp alu_tb.v alu.v logical.v arithmetic.v mux_4x1.v ripple_carry_adder_4bit.v full_adder.v
 
----
-
-## 📷 Simulation Waveform
-
-### ALU Output Waveform
-
-![ALU Waveform](screenshots/waveform.png)
+vvp alu_tb.vvp
+gtkwave alu_tb.vcd
